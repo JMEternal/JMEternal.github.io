@@ -25,8 +25,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202208171249734.png">
 <meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202208171313937.png">
+<meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202208172031321.png">
 <meta property="article:published_time" content="2022-08-17T10:42:15.930Z">
-<meta property="article:modified_time" content="2022-08-17T11:15:00.589Z">
+<meta property="article:modified_time" content="2022-08-17T12:31:15.694Z">
 <meta property="article:author" content="jianing">
 <meta property="article:tag" content="Java-集合">
 <meta name="twitter:card" content="summary_large_image">
@@ -243,7 +244,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.2k 字
+          6.3k 字
         
       </span>
     
@@ -254,7 +255,7 @@
         
         
         
-          44 分钟
+          53 分钟
         
       </span>
     
@@ -429,6 +430,60 @@
 <li><strong>有序</strong></li>
 <li>无索引</li>
 <li>不可重复</li>
+</ul>
+<h2 id="三、Map集合体系（双列集合）"><a href="#三、Map集合体系（双列集合）" class="headerlink" title="三、Map集合体系（双列集合）"></a>三、Map集合体系（双列集合）</h2><h3 id="Map-lt-K-V-gt-接口："><a href="#Map-lt-K-V-gt-接口：" class="headerlink" title="Map&lt;K,V&gt;接口："></a>Map&lt;K,V&gt;接口：</h3><p><img src="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202208172031321.png" srcset="/img/loading.gif" lazyload alt="image-20220817203110253"></p>
+<p>特点：</p>
+<ul>
+<li>键唯一，值可以重复</li>
+<li>一个键对应一个值（键值对关系 &#x2F; 映射关系）</li>
+<li>依靠键维护键值对关系（可以通过键获取到值，但不能通过值获取键）</li>
+</ul>
+<h4 id="1、Map-lt-K-V-gt-接口的常用实现类："><a href="#1、Map-lt-K-V-gt-接口的常用实现类：" class="headerlink" title="1、Map&lt;K,V&gt;接口的常用实现类："></a>1、Map&lt;K,V&gt;接口的常用实现类：</h4><ul>
+<li>HashMap&lt;K,V&gt;：线程不同步，不安全，效率高</li>
+<li>Hashtable&lt;K,V&gt;：线程同步，安全，效率低</li>
+<li>LinkedHashMap&lt;K,V&gt;：线程不同步，不安全，效率高</li>
+</ul>
+<h4 id="2、HashMap-lt-K-V-gt-集合"><a href="#2、HashMap-lt-K-V-gt-集合" class="headerlink" title="2、HashMap&lt;K,V&gt;集合"></a>2、HashMap&lt;K,V&gt;集合</h4><p>1）、特点</p>
+<ol>
+<li>键具备哈希特性：哈希表（数组 + 单向链表 &#x2F; 红黑树）</li>
+<li>查询速度非常快，增删速度也快</li>
+<li>键唯一：键所属的类要重写hashCode和equals方法</li>
+<li>键无序：不保证存入和取出的顺序一致</li>
+<li>键无索引：不能通过索引的方式获取键</li>
+<li>允许存储 null键 和 null值</li>
+<li>线程不同步，不安全，效率高</li>
+</ol>
+<h4 id="3、Hashtable-lt-K-V-gt-集合"><a href="#3、Hashtable-lt-K-V-gt-集合" class="headerlink" title="3、Hashtable&lt;K,V&gt;集合"></a>3、Hashtable&lt;K,V&gt;集合</h4><p>1）、特点</p>
+<ol>
+<li>键具备哈希特性：哈希表（数组 + 单向链表）</li>
+<li>查询速度非常快，增删速度也快</li>
+<li>键唯一：键所属的类要重写hashCode和equals方法</li>
+<li>键无序：不保证存入和取出的顺序一致</li>
+<li>键无索引：不能通过索引的方式获取键</li>
+<li>不允许存储 null键 和 null值</li>
+<li>线程同步，安全，效率低</li>
+</ol>
+<h4 id="4、LinkedHashMap-lt-K-V-gt-集合"><a href="#4、LinkedHashMap-lt-K-V-gt-集合" class="headerlink" title="4、LinkedHashMap&lt;K,V&gt;集合"></a>4、LinkedHashMap&lt;K,V&gt;集合</h4><p>1）、特点</p>
+<ol>
+<li>键具备哈希特性 和 链表特性：哈希表（数组 + 双向链表）</li>
+<li>查询速度非常快，增删速度也快</li>
+<li>哈希特性保证键唯一：键所属的类要重写hashCode和equals方法</li>
+<li>链表特性保证键有序：保证存入和取出的顺序一致</li>
+<li>键无索引：不能通过索引的方式获取键</li>
+<li>不允许存储 null键 和 null值</li>
+<li>线程不同步，不安全，效率高</li>
+</ol>
+<h4 id="5、Properties集合（属性集）"><a href="#5、Properties集合（属性集）" class="headerlink" title="5、Properties集合（属性集）"></a>5、Properties集合（属性集）</h4><p>1）、Properties集合是Hashtable的子类</p>
+<p>2）、数据存储格式: 属性名&#x3D;属性值 如：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">name</span>=<span class="hljs-string">zhangsan</span><br><span class="hljs-attr">age</span>=<span class="hljs-string">18</span><br></code></pre></td></tr></table></figure>
+
+<p>3）、可以存储在properties文件中</p>
+<p>4）、特点：</p>
+<ul>
+<li>Properties也是Map集合的实现类,Map集合中定义的方法,它都有</li>
+<li>Hashtable是Map接口的实现类,具有泛型K代表键的类型,V代表值的类型；但是Properties继承Hashtable时,确定键的类型Object以及值的类型Object； 所以创建Properties集合对象时,不能再指定泛型</li>
+<li>Properties集合提供了参数和返回值都是String的方法,而String后期可以写在文件中</li>
+<li>Properties集合是唯一一个和IO流配合使用的双列集合</li>
 </ul>
 
                 
