@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>markdown文章标签</title>
+    <link href="/2022/08/18/%E6%A0%BC%E5%BC%8F/"/>
+    <url>/2022/08/18/%E6%A0%BC%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<h4 id="便签"><a href="#便签" class="headerlink" title="便签"></a>便签</h4><div class="note note-primary">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><div class="note note-secondary">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><div class="note note-success">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><div class="note note-danger">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><div class="note note-warning">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><div class="note note-info">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><div class="note note-light">            <p>文字 或者 <code>markdown</code> 均可</p>          </div><h4 id="行内标签"><a href="#行内标签" class="headerlink" title="行内标签"></a>行内标签</h4><span class="label label-primary">text</span><span class="label label-default">text</span><span class="label label-info">text</span><span class="label label-success">text</span><span class="label label-warning">text</span><span class="label label-danger">text</span>]]></content>
+    
+    
+    <categories>
+      
+      <category>markdown</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Tag</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>集合体系梳理</title>
     <link href="/2022/08/17/%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/"/>
     <url>/2022/08/17/%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%E6%A2%B3%E7%90%86/</url>
@@ -20,7 +45,7 @@
     
     <tags>
       
-      <tag>Java-集合</tag>
+      <tag>Java</tag>
       
     </tags>
     
