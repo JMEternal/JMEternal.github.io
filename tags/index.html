@@ -2,6 +2,9 @@
 
 <!DOCTYPE html>
 <html lang="zh-CN" data-default-color-scheme=auto>
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" > -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" >
+
 
 
 
@@ -100,6 +103,46 @@
 <meta name="generator" content="Hexo 6.2.0"></head>
 
 <body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+<!--   <div id='loader'> -->
+<!--     <div class="outer_box"> -->
+<!--     <div class='loader_overlay'></div> -->
+<!--     <div class='loader_cogs'> -->
+<!--       <div class='loader_cogs__top'> -->
+<!--         <div class='top_part'></div> -->
+<!--         <div class='top_part'></div> -->
+<!--         <div class='top_part'></div> -->
+<!--         <div class='top_hole'></div> -->
+<!--       </div> -->
+<!--       <div class='loader_cogs__left'> -->
+<!--         <div class='left_part'></div> -->
+<!--         <div class='left_part'></div> -->
+<!--         <div class='left_part'></div> -->
+<!--         <div class='left_hole'></div> -->
+<!--       </div> -->
+<!--       <div class='loader_cogs__bottom'> -->
+<!--         <div class='bottom_part'></div> -->
+<!--         <div class='bottom_part'></div> -->
+<!--         <div class='bottom_part'></div> -->
+<!--         <div class='bottom_hole'></div> -->
+<!--       </div> -->
+<!--        --><!-- <p>loading</p> -->
+<!--     </div> -->
+<!--     </div> -->
+<!--   </div> -->
+  <div id="loader">
+    <div class="loading-left-bg"></div>
+    <div class="loading-right-bg"></div>
+    <div class="spinner-box">
+      <div class="configure-border-1">
+        <div class="configure-core"></div>
+      </div>
+      <div class="configure-border-2">
+        <div class="configure-core"></div>
+      </div>
+      <div class="loading-word">加载中...</div>
+    </div>
+  </div>
+
   
 
   <header>
@@ -394,6 +437,21 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
+<!--   <script> -->
+<!--     var endLoading = function () { -->
+<!--       document.body.style.overflow = 'auto'; -->
+<!--       document.getElementById('loader').classList.add("loading"); -->
+<!--     } -->
+<!--     window.addEventListener('load',endLoading); -->
+<!--   </script> -->
+  <script>
+    var endLoading = function () {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loader').classList.add("loading");
+    }
+    window.addEventListener('load',endLoading);
+  </script>
+
 <!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
 </html>
 <!--单击显示文字-->

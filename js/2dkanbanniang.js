@@ -3,13 +3,13 @@ Live.src = "https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/l
 Live.onload = function () {
     L2Dwidget.init({
         "model": {
-            jsonPath: "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
+            jsonPath: "https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json",
             "scale": 1
         },
         "display": {
             "position": "right",
             "width": document.body.clientWidth * 0.07,
-            "height": document.body.clientWidth * 0.14,
+            "height": document.body.clientWidth * 0.1,
             "hOffset": 0,
             "vOffset": -30
         },
