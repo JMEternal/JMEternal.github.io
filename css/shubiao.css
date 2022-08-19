@@ -1,0 +1,17 @@
+body, header, div.mask.flex-center, div.scroll-down-bar, #banner.banner, h1,h2,h3,h4,h5,h6 {
+    cursor: url(https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a11.cur), auto;
+}
+
+a:hover, button:hover, i:hover {
+    cursor: url(https://typora-gilgamesh.oss-cn-shanghai.aliyuncs.com/img1/a22.cur), auto;
+}
+
+#rightside>div>button,
+#rightside>div>a {
+    display: block;
+    margin-bottom: 2px;
+    width: 30px;
+    height: 30px;
+    color: var(--btn-color);
+    text-align: center;
+    font-size: 16px;
