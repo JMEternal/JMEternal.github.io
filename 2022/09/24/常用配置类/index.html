@@ -19,22 +19,22 @@
   <meta name="author" content="Ning">
   <meta name="keywords" content="">
   
-    <meta name="description" content="resources目录下application.yml文件常用配置             1234567891011121314151617181920212223242526272829303132333435# 设置端口server:  port: 8080spring:  application:  	#应用名称 , 可选    name: reggie_take">
+    <meta name="description" content="1、MybatisPlus配置类             MybatisPlusConfig             123456789101112131415161718192021import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;import com.baomidou.mybatisplus.ext">
 <meta property="og:type" content="article">
-<meta property="og:title" content="application.yml常用配置">
-<meta property="og:url" content="http://example.com/2022/09/23/application.yml%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="常用配置类">
+<meta property="og:url" content="http://example.com/2022/09/24/%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E7%B1%BB/index.html">
 <meta property="og:site_name" content="Ning’s Blog">
-<meta property="og:description" content="resources目录下application.yml文件常用配置             1234567891011121314151617181920212223242526272829303132333435# 设置端口server:  port: 8080spring:  application:  	#应用名称 , 可选    name: reggie_take">
+<meta property="og:description" content="1、MybatisPlus配置类             MybatisPlusConfig             123456789101112131415161718192021import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;import com.baomidou.mybatisplus.ext">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-23T15:33:01.685Z">
-<meta property="article:modified_time" content="2022-09-24T12:10:33.922Z">
+<meta property="article:published_time" content="2022-09-24T08:43:35.658Z">
+<meta property="article:modified_time" content="2022-09-24T12:11:13.469Z">
 <meta property="article:author" content="Ning">
-<meta property="article:tag" content="配置文件">
+<meta property="article:tag" content="配置类">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>application.yml常用配置 - Ning’s Blog</title>
+  <title>常用配置类 - Ning’s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -264,7 +264,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="application.yml常用配置"></span>
+            <span id="subtitle" data-typed-text="常用配置类"></span>
           
         </div>
 
@@ -275,8 +275,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-23 23:33" pubdate>
-          2022年9月23日 晚上
+        <time datetime="2022-09-24 16:43" pubdate>
+          2022年9月24日 下午
         </time>
       </span>
     
@@ -287,7 +287,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          878 字
+          4.7k 字
         
       </span>
     
@@ -298,7 +298,7 @@
         
         
         
-          8 分钟
+          40 分钟
         
       </span>
     
@@ -354,18 +354,28 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">application.yml常用配置</h1>
+            <h1 style="display: none">常用配置类</h1>
             
             
               <div class="markdown-body">
                 
-                <div class="note note-primary">
-            <p>resources目录下application.yml文件常用配置</p>
+                <h3 id="1、MybatisPlus配置类"><a href="#1、MybatisPlus配置类" class="headerlink" title="1、MybatisPlus配置类"></a>1、MybatisPlus配置类</h3><div class="note note-danger">
+            <p>MybatisPlusConfig</p>
           </div>
 
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># 设置端口</span><br><span class="hljs-attr">server:</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">8080</span><br><span class="hljs-attr">spring:</span><br>  <span class="hljs-attr">application:</span><br>  	<span class="hljs-comment">#应用名称 , 可选</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">reggie_take_out</span><br>  <span class="hljs-comment"># 数据库连接</span><br>  <span class="hljs-attr">datasource:</span><br>    <span class="hljs-attr">druid:</span><br>      <span class="hljs-attr">driver-class-name:</span> <span class="hljs-string">com.mysql.cj.jdbc.Driver</span><br>      <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/reggie?serverTimezone=Asia/Shanghai&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;allowPublicKeyRetrieval=true</span><br>      <span class="hljs-attr">username:</span> <span class="hljs-string">root</span><br>      <span class="hljs-attr">password:</span> <span class="hljs-string">root</span><br>      <br><span class="hljs-comment"># mybatis-plus</span><br><span class="hljs-attr">mybatis-plus:</span><br>  <span class="hljs-attr">configuration:</span><br>    <span class="hljs-comment">#在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射 address_book ---&gt; AddressBook</span><br>    <span class="hljs-attr">map-underscore-to-camel-case:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-comment">#日志输出</span><br>    <span class="hljs-attr">log-impl:</span> <span class="hljs-string">org.apache.ibatis.logging.stdout.StdOutImpl</span><br>  <span class="hljs-comment"># 全局配置</span><br>  <span class="hljs-attr">global-config:</span><br>    <span class="hljs-attr">db-config:</span><br>    <span class="hljs-comment">#设置ID自增类型 默认雪花算法</span><br>      <span class="hljs-attr">id-type:</span> <span class="hljs-string">ASSIGN_ID</span><br>      <br><span class="hljs-comment"># 阿里云    </span><br><span class="hljs-attr">aliyun:</span><br>  <span class="hljs-attr">oss:</span><br>    <span class="hljs-attr">endpoint:</span> <span class="hljs-string">https://oss-cn-hangzhou.aliyuncs.com</span><br>    <span class="hljs-attr">accessKeyId:</span> <span class="hljs-string">LTAI4GCH1vX6DKqJWxd6nEuW</span><br>    <span class="hljs-attr">accessKeySecret:</span> <span class="hljs-string">yBshYweHOpqDuhCArrVHwIiBKpyqSL</span><br>    <span class="hljs-attr">bucketName:</span> <span class="hljs-string">web-397</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;<br><span class="hljs-keyword">import</span> com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;<br><span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;<br><span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> JiaNing</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@version</span> 1.0</span><br><span class="hljs-comment"> * 2022/9/24</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@Configuration</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MybatisPlusConfig</span> &#123;<br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-keyword">public</span> MybatisPlusInterceptor <span class="hljs-title function_">mybatisPlusInterceptor</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-comment">//mp的拦截器</span><br>        <span class="hljs-type">MybatisPlusInterceptor</span> <span class="hljs-variable">interceptor</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MybatisPlusInterceptor</span>();<br>        <span class="hljs-comment">//在拦截器中添加分页插件</span><br>        interceptor.addInnerInterceptor(<span class="hljs-keyword">new</span> <span class="hljs-title class_">PaginationInnerInterceptor</span>());<br>        <span class="hljs-keyword">return</span> interceptor;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
+<h3 id="2、基于jackson的对象映射器"><a href="#2、基于jackson的对象映射器" class="headerlink" title="2、基于jackson的对象映射器"></a>2、基于jackson的对象映射器</h3><div class="note note-danger">
+            <p>JacksonObjectMapper</p>
+          </div>
 
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.itheima.reggie.mapper;<br><br><span class="hljs-keyword">import</span> com.fasterxml.jackson.databind.DeserializationFeature;<br><span class="hljs-keyword">import</span> com.fasterxml.jackson.databind.ObjectMapper;<br><span class="hljs-keyword">import</span> com.fasterxml.jackson.databind.<span class="hljs-keyword">module</span>.SimpleModule;<br><span class="hljs-keyword">import</span> com.fasterxml.jackson.databind.ser.std.ToStringSerializer;<br><span class="hljs-keyword">import</span> com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;<br><span class="hljs-keyword">import</span> com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;<br><span class="hljs-keyword">import</span> com.fasterxml.jackson.datatype.jsr310.deser.LocalTimeDeserializer;<br><span class="hljs-keyword">import</span> com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;<br><span class="hljs-keyword">import</span> com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;<br><span class="hljs-keyword">import</span> com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;<br><span class="hljs-keyword">import</span> java.math.BigInteger;<br><span class="hljs-keyword">import</span> java.time.LocalDate;<br><span class="hljs-keyword">import</span> java.time.LocalDateTime;<br><span class="hljs-keyword">import</span> java.time.LocalTime;<br><span class="hljs-keyword">import</span> java.time.format.DateTimeFormatter;<br><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 对象映射器:基于jackson将Java对象转为json，或者将json转为Java对象</span><br><span class="hljs-comment"> * 将JSON解析为Java对象的过程称为 [从JSON反序列化Java对象]</span><br><span class="hljs-comment"> * 从Java对象生成JSON的过程称为 [序列化Java对象到JSON]</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">JacksonObjectMapper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">ObjectMapper</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">DEFAULT_DATE_FORMAT</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;yyyy-MM-dd&quot;</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">DEFAULT_DATE_TIME_FORMAT</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">DEFAULT_TIME_FORMAT</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;HH:mm:ss&quot;</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">JacksonObjectMapper</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-built_in">super</span>();<br>        <span class="hljs-comment">//收到未知属性时不报异常</span><br>        <span class="hljs-built_in">this</span>.configure(FAIL_ON_UNKNOWN_PROPERTIES, <span class="hljs-literal">false</span>);<br>        <span class="hljs-comment">//反序列化时，属性不存在的兼容处理</span><br>        <span class="hljs-built_in">this</span>.getDeserializationConfig().withoutFeatures(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);<br><br>        <span class="hljs-type">SimpleModule</span> <span class="hljs-variable">simpleModule</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SimpleModule</span>()<br>                .addDeserializer(LocalDateTime.class, <span class="hljs-keyword">new</span> <span class="hljs-title class_">LocalDateTimeDeserializer</span>(DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT)))<br>                .addDeserializer(LocalDate.class, <span class="hljs-keyword">new</span> <span class="hljs-title class_">LocalDateDeserializer</span>(DateTimeFormatter.ofPattern(DEFAULT_DATE_FORMAT)))<br>                .addDeserializer(LocalTime.class, <span class="hljs-keyword">new</span> <span class="hljs-title class_">LocalTimeDeserializer</span>(DateTimeFormatter.ofPattern(DEFAULT_TIME_FORMAT)))<br><br>                .addSerializer(BigInteger.class, ToStringSerializer.instance)<br>                .addSerializer(Long.class, ToStringSerializer.instance)<br><br>                .addSerializer(LocalDateTime.class, <span class="hljs-keyword">new</span> <span class="hljs-title class_">LocalDateTimeSerializer</span>(DateTimeFormatter.ofPattern(DEFAULT_DATE_TIME_FORMAT)))<br>                .addSerializer(LocalDate.class, <span class="hljs-keyword">new</span> <span class="hljs-title class_">LocalDateSerializer</span>(DateTimeFormatter.ofPattern(DEFAULT_DATE_FORMAT)))<br>                .addSerializer(LocalTime.class, <span class="hljs-keyword">new</span> <span class="hljs-title class_">LocalTimeSerializer</span>(DateTimeFormatter.ofPattern(DEFAULT_TIME_FORMAT)));<br>        <span class="hljs-comment">//注册功能模块 例如，可以添加自定义序列化器和反序列化器</span><br>        <span class="hljs-built_in">this</span>.registerModule(simpleModule);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="3、WebMvc配置类"><a href="#3、WebMvc配置类" class="headerlink" title="3、WebMvc配置类"></a>3、WebMvc配置类</h3><div class="note note-danger">
+            <p>WebMvcConfig</p>
+          </div>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.itheima.reggie.config;<br><br><span class="hljs-keyword">import</span> com.itheima.reggie.mapper.JacksonObjectMapper;<br><span class="hljs-keyword">import</span> lombok.extern.slf4j.Slf4j;<br><span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;<br><span class="hljs-keyword">import</span> org.springframework.http.converter.HttpMessageConverter;<br><span class="hljs-keyword">import</span> org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;<br><span class="hljs-keyword">import</span> org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;<br><span class="hljs-keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;<br><br><span class="hljs-keyword">import</span> java.util.List;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> JiaNing</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@version</span> 1.0</span><br><span class="hljs-comment"> * 2022/9/23</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@Configuration</span><br><span class="hljs-meta">@Slf4j</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">WebMvcConfig</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">WebMvcConfigurationSupport</span> &#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">addResourceHandlers</span><span class="hljs-params">(ResourceHandlerRegistry registry)</span> &#123;<br>        log.info(<span class="hljs-string">&quot;开始进行静态资源映射...&quot;</span>);<br>        registry.addResourceHandler(<span class="hljs-string">&quot;/backend/**&quot;</span>).addResourceLocations(<span class="hljs-string">&quot;classpath:/backend/&quot;</span>);<br>        registry.addResourceHandler(<span class="hljs-string">&quot;/front/**&quot;</span>).addResourceLocations(<span class="hljs-string">&quot;classpath:/front/&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 扩展mvc框架的消息转换器</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> converters</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">extendMessageConverters</span><span class="hljs-params">(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters)</span> &#123;<br>        log.info(<span class="hljs-string">&quot;扩展消息转换器...&quot;</span>);<br>        <span class="hljs-comment">//创建消息转换器对象</span><br>        <span class="hljs-type">MappingJackson2HttpMessageConverter</span> <span class="hljs-variable">messageConverter</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MappingJackson2HttpMessageConverter</span>();<br>        <span class="hljs-comment">//设置对象转换器，底层使用Jackson将Java对象转为json</span><br>        messageConverter.setObjectMapper(<span class="hljs-keyword">new</span> <span class="hljs-title class_">JacksonObjectMapper</span>());<br>        <span class="hljs-comment">//将上面的消息转换器对象追加到mvc框架的转换器集合中</span><br>        converters.add(<span class="hljs-number">0</span>,messageConverter);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -385,7 +395,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" class="category-chain-item">配置文件</a>
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
   
   
 
@@ -400,7 +410,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">#配置文件</a>
+        <a href="/tags/%E9%85%8D%E7%BD%AE%E7%B1%BB/">#配置类</a>
       
     </div>
   
@@ -412,8 +422,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>application.yml常用配置</div>
-      <div>http://example.com/2022/09/23/application.yml常用配置/</div>
+      <div>常用配置类</div>
+      <div>http://example.com/2022/09/24/常用配置类/</div>
     </div>
     <div class="license-meta">
       
@@ -425,7 +435,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月23日</div>
+          <div>2022年9月24日</div>
         </div>
       
       
@@ -467,9 +477,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/24/%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E7%B1%BB/" title="常用配置类">
+                      <a href="/2022/09/24/%E8%BF%87%E6%BB%A4%E5%99%A8%E7%AE%80%E5%8D%95%E4%BB%A3%E7%A0%81/" title="过滤器简单代码">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">常用配置类</span>
+                        <span class="hidden-mobile">过滤器简单代码</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -477,8 +487,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/23/pom.xml%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" title="Pom文件常用配置">
-                        <span class="hidden-mobile">Pom文件常用配置</span>
+                      <a href="/2022/09/23/application.yml%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" title="application.yml常用配置">
+                        <span class="hidden-mobile">application.yml常用配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

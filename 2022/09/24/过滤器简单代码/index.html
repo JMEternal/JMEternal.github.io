@@ -19,22 +19,22 @@
   <meta name="author" content="Ning">
   <meta name="keywords" content="">
   
-    <meta name="description" content="resources目录下application.yml文件常用配置             1234567891011121314151617181920212223242526272829303132333435# 设置端口server:  port: 8080spring:  application:  	#应用名称 , 可选    name: reggie_take">
+    <meta name="description" content="全局配置类 GlobalConstant.java             123public class GlobalConstant &amp;#123;    public static final String EMPLOYEE_KEY &#x3D; &quot;employee&quot;;&amp;#125;               LoginCheckFilter.java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="application.yml常用配置">
-<meta property="og:url" content="http://example.com/2022/09/23/application.yml%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="过滤器简单代码">
+<meta property="og:url" content="http://example.com/2022/09/24/%E8%BF%87%E6%BB%A4%E5%99%A8%E7%AE%80%E5%8D%95%E4%BB%A3%E7%A0%81/index.html">
 <meta property="og:site_name" content="Ning’s Blog">
-<meta property="og:description" content="resources目录下application.yml文件常用配置             1234567891011121314151617181920212223242526272829303132333435# 设置端口server:  port: 8080spring:  application:  	#应用名称 , 可选    name: reggie_take">
+<meta property="og:description" content="全局配置类 GlobalConstant.java             123public class GlobalConstant &amp;#123;    public static final String EMPLOYEE_KEY &#x3D; &quot;employee&quot;;&amp;#125;               LoginCheckFilter.java">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-23T15:33:01.685Z">
-<meta property="article:modified_time" content="2022-09-24T12:10:33.922Z">
+<meta property="article:published_time" content="2022-09-24T12:07:22.211Z">
+<meta property="article:modified_time" content="2022-09-24T12:12:53.007Z">
 <meta property="article:author" content="Ning">
-<meta property="article:tag" content="配置文件">
+<meta property="article:tag" content="过滤器Filter">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>application.yml常用配置 - Ning’s Blog</title>
+  <title>过滤器简单代码 - Ning’s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -264,7 +264,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="application.yml常用配置"></span>
+            <span id="subtitle" data-typed-text="过滤器简单代码"></span>
           
         </div>
 
@@ -275,8 +275,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-23 23:33" pubdate>
-          2022年9月23日 晚上
+        <time datetime="2022-09-24 20:07" pubdate>
+          2022年9月24日 晚上
         </time>
       </span>
     
@@ -287,7 +287,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          878 字
+          1.8k 字
         
       </span>
     
@@ -298,7 +298,7 @@
         
         
         
-          8 分钟
+          16 分钟
         
       </span>
     
@@ -354,20 +354,22 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">application.yml常用配置</h1>
+            <h1 style="display: none">过滤器简单代码</h1>
             
             
               <div class="markdown-body">
                 
-                <div class="note note-primary">
-            <p>resources目录下application.yml文件常用配置</p>
+                <div class="note note-warning">
+            <p>全局配置类 GlobalConstant.java</p>
           </div>
 
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-comment"># 设置端口</span><br><span class="hljs-attr">server:</span><br>  <span class="hljs-attr">port:</span> <span class="hljs-number">8080</span><br><span class="hljs-attr">spring:</span><br>  <span class="hljs-attr">application:</span><br>  	<span class="hljs-comment">#应用名称 , 可选</span><br>    <span class="hljs-attr">name:</span> <span class="hljs-string">reggie_take_out</span><br>  <span class="hljs-comment"># 数据库连接</span><br>  <span class="hljs-attr">datasource:</span><br>    <span class="hljs-attr">druid:</span><br>      <span class="hljs-attr">driver-class-name:</span> <span class="hljs-string">com.mysql.cj.jdbc.Driver</span><br>      <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/reggie?serverTimezone=Asia/Shanghai&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=false&amp;allowPublicKeyRetrieval=true</span><br>      <span class="hljs-attr">username:</span> <span class="hljs-string">root</span><br>      <span class="hljs-attr">password:</span> <span class="hljs-string">root</span><br>      <br><span class="hljs-comment"># mybatis-plus</span><br><span class="hljs-attr">mybatis-plus:</span><br>  <span class="hljs-attr">configuration:</span><br>    <span class="hljs-comment">#在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射 address_book ---&gt; AddressBook</span><br>    <span class="hljs-attr">map-underscore-to-camel-case:</span> <span class="hljs-literal">true</span><br>    <span class="hljs-comment">#日志输出</span><br>    <span class="hljs-attr">log-impl:</span> <span class="hljs-string">org.apache.ibatis.logging.stdout.StdOutImpl</span><br>  <span class="hljs-comment"># 全局配置</span><br>  <span class="hljs-attr">global-config:</span><br>    <span class="hljs-attr">db-config:</span><br>    <span class="hljs-comment">#设置ID自增类型 默认雪花算法</span><br>      <span class="hljs-attr">id-type:</span> <span class="hljs-string">ASSIGN_ID</span><br>      <br><span class="hljs-comment"># 阿里云    </span><br><span class="hljs-attr">aliyun:</span><br>  <span class="hljs-attr">oss:</span><br>    <span class="hljs-attr">endpoint:</span> <span class="hljs-string">https://oss-cn-hangzhou.aliyuncs.com</span><br>    <span class="hljs-attr">accessKeyId:</span> <span class="hljs-string">LTAI4GCH1vX6DKqJWxd6nEuW</span><br>    <span class="hljs-attr">accessKeySecret:</span> <span class="hljs-string">yBshYweHOpqDuhCArrVHwIiBKpyqSL</span><br>    <span class="hljs-attr">bucketName:</span> <span class="hljs-string">web-397</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GlobalConstant</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">EMPLOYEE_KEY</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;employee&quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
+<div class="note note-warning">
+            <p>LoginCheckFilter.java</p>
+          </div>
 
-
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.alibaba.fastjson.JSON;<br><span class="hljs-keyword">import</span> com.itheima.reggie.common.GlobalConstant;<br><span class="hljs-keyword">import</span> com.itheima.reggie.common.R;<br><span class="hljs-keyword">import</span> org.springframework.util.AntPathMatcher;<br><span class="hljs-keyword">import</span> javax.servlet.*;<br><span class="hljs-keyword">import</span> javax.servlet.annotation.WebFilter;<br><span class="hljs-keyword">import</span> javax.servlet.http.HttpServletRequest;<br><span class="hljs-keyword">import</span> javax.servlet.http.HttpServletResponse;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> JiaNing</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@version</span> 1.0</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@WebFilter(filterName = &quot;LoginCheckFilter&quot;, urlPatterns = &quot;/*&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoginCheckFilter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Filter</span> &#123;<br>    <span class="hljs-comment">//要放行的uri地址</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String[] URIS = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>[]&#123;<br>            <span class="hljs-string">&quot;/employee/login&quot;</span>,<br>            <span class="hljs-string">&quot;/employee/logout&quot;</span>,<br>            <span class="hljs-string">&quot;/backend/**&quot;</span>,<br>            <span class="hljs-string">&quot;/front/**&quot;</span><br>    &#125;;<br>    <span class="hljs-comment">//使用AntPathMatcher类的match方法进行地址匹配</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-type">AntPathMatcher</span> <span class="hljs-variable">MATCHER</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">AntPathMatcher</span>();<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">doFilter</span><span class="hljs-params">(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)</span> <span class="hljs-keyword">throws</span> IOException, ServletException &#123;<br>        <span class="hljs-type">HttpServletRequest</span> <span class="hljs-variable">request</span> <span class="hljs-operator">=</span> (HttpServletRequest) servletRequest;<br>        <span class="hljs-type">HttpServletResponse</span> <span class="hljs-variable">response</span> <span class="hljs-operator">=</span> (HttpServletResponse) servletResponse;<br>        <span class="hljs-comment">//1、获取本次请求的URI</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">uri</span> <span class="hljs-operator">=</span> request.getRequestURI();<br>        <span class="hljs-comment">//2、判断本次请求是否需要校验用户登录状态</span><br>        <span class="hljs-comment">//地址匹配</span><br>        <span class="hljs-keyword">for</span> (String u : URIS) &#123;<br>            <span class="hljs-keyword">if</span> (MATCHER.match(u, uri)) &#123;<br>                filterChain.doFilter(servletRequest, servletResponse);<br>                <span class="hljs-keyword">return</span>;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-comment">//3、判断登录状态，如果已登录，则直接放行</span><br>        <span class="hljs-type">Long</span> <span class="hljs-variable">employeeId</span> <span class="hljs-operator">=</span> (Long) request.getSession().getAttribute(GlobalConstant.EMPLOYEE_KEY);<br>        <span class="hljs-keyword">if</span> (employeeId != <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-comment">//存在employee会话 放行</span><br>            filterChain.doFilter(servletRequest, servletResponse);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <span class="hljs-comment">//4、如果未登录, 则返回未登录结果</span><br>        <span class="hljs-comment">//使用阿里巴巴的对象转JSON工具</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">string</span> <span class="hljs-operator">=</span> JSON.toJSONString(R.error(<span class="hljs-string">&quot;NOTLOGIN&quot;</span>));<br>        response.getWriter().write(string);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -385,7 +387,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" class="category-chain-item">配置文件</a>
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
   
   
 
@@ -400,7 +402,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">#配置文件</a>
+        <a href="/tags/%E8%BF%87%E6%BB%A4%E5%99%A8Filter/">#过滤器Filter</a>
       
     </div>
   
@@ -412,8 +414,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>application.yml常用配置</div>
-      <div>http://example.com/2022/09/23/application.yml常用配置/</div>
+      <div>过滤器简单代码</div>
+      <div>http://example.com/2022/09/24/过滤器简单代码/</div>
     </div>
     <div class="license-meta">
       
@@ -425,7 +427,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月23日</div>
+          <div>2022年9月24日</div>
         </div>
       
       
@@ -467,18 +469,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/24/%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E7%B1%BB/" title="常用配置类">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">常用配置类</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/23/pom.xml%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/" title="Pom文件常用配置">
-                        <span class="hidden-mobile">Pom文件常用配置</span>
+                      <a href="/2022/09/24/%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E7%B1%BB/" title="常用配置类">
+                        <span class="hidden-mobile">常用配置类</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
