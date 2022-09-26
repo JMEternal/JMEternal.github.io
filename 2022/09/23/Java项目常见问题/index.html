@@ -35,8 +35,9 @@
 <meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209251412191.png">
 <meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209251536543.png">
 <meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209251537827.png">
+<meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209261123801.png">
 <meta property="article:published_time" content="2022-09-23T04:21:56.176Z">
-<meta property="article:modified_time" content="2022-09-26T03:22:05.989Z">
+<meta property="article:modified_time" content="2022-09-26T04:02:56.088Z">
 <meta property="article:author" content="Ning">
 <meta property="article:tag" content="问题锦集">
 <meta name="twitter:card" content="summary_large_image">
@@ -455,7 +456,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Service</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Service2</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Service1 service1;<br>	<span class="hljs-comment">//Spring Boot在进行解析时，会自动将Service1的单例对象进行注入</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Service2</span><span class="hljs-params">(Service1 service1)</span> &#123;<br>        <span class="hljs-built_in">this</span>.service1 = service1;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="16、mybatis-plus的公共字段填充功能"><a href="#16、mybatis-plus的公共字段填充功能" class="headerlink" title="16、mybatis plus的公共字段填充功能"></a>16、mybatis plus的公共字段填充功能</h2><ol>
-<li><p>在实体类的属性上加入**@TableField<strong>注解，指定</strong>自动填充的策略**</p>
+<li><p>在实体类的属性上加入@TableField注解，指定自动填充的策略</p>
 <div class="note note-primary">
             <p>Employee.java</p>
           </div>
@@ -473,6 +474,7 @@
 </li>
 <li><p>动态获取当前登录用户的id：BaseContext.getThreadLocalUserId()</p>
 <p>想要动态的获取当前登录用户id，我们可以通过<strong>ThreadLocal</strong>类来实现</p>
+<p><img src="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209261123801.png" srcset="/img/loading.gif" lazyload alt="image-20220926112358668"></p>
 <blockquote>
 <p><strong>ThreadLocal：</strong></p>
 <p>ThreadLocal并不是一个Thread，而是Thread的局部变量。当使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程提供独立的变量副本，所以每一个线程都可以独立地改变自己的副本，而不会影响其它线程所对应的副本。</p>
