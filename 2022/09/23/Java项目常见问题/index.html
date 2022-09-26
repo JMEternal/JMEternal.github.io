@@ -37,7 +37,7 @@
 <meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209251537827.png">
 <meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209261123801.png">
 <meta property="article:published_time" content="2022-09-23T04:21:56.176Z">
-<meta property="article:modified_time" content="2022-09-26T04:02:56.088Z">
+<meta property="article:modified_time" content="2022-09-26T12:25:07.517Z">
 <meta property="article:author" content="Ning">
 <meta property="article:tag" content="问题锦集">
 <meta name="twitter:card" content="summary_large_image">
@@ -298,7 +298,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          9.6k 字
+          10k 字
         
       </span>
     
@@ -309,7 +309,7 @@
         
         
         
-          81 分钟
+          85 分钟
         
       </span>
     
@@ -502,7 +502,12 @@
 </ul>
 </li>
 </ol>
-<h2 id="17、"><a href="#17、" class="headerlink" title="17、"></a>17、</h2>
+<h2 id="17、自定义异常，全局处理异常"><a href="#17、自定义异常，全局处理异常" class="headerlink" title="17、自定义异常，全局处理异常"></a>17、自定义异常，全局处理异常</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 自定义业务异常类-分类下存在菜品</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> Ning</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CustomException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">RuntimeException</span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">CustomException</span> <span class="hljs-params">(String message)</span> &#123;<br>        <span class="hljs-built_in">super</span>(message);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>GlobalExceptionHandler</strong>类中处理异常</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment">    * 处理自定义 CustomException 异常</span><br><span class="hljs-comment">    * <span class="hljs-doctag">@param</span> exception CustomException类异常</span><br><span class="hljs-comment">    * <span class="hljs-doctag">@return</span> R</span><br><span class="hljs-comment">    */</span><br>   <span class="hljs-meta">@ExceptionHandler(CustomException.class)</span><br>   <span class="hljs-keyword">public</span> R&lt;String&gt; <span class="hljs-title function_">exceptionHandler</span><span class="hljs-params">(CustomException exception)</span> &#123;<br>       log.error(exception.getMessage());<br>       <span class="hljs-keyword">return</span> R.error(exception.getMessage());<br>   &#125;<br></code></pre></td></tr></table></figure>
+
+
                 
               </div>
             
