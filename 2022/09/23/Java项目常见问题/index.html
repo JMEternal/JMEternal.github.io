@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209261123801.png">
 <meta property="og:image" content="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209271851308.png">
 <meta property="article:published_time" content="2022-09-23T04:21:56.176Z">
-<meta property="article:modified_time" content="2022-09-27T12:58:02.346Z">
+<meta property="article:modified_time" content="2022-10-05T12:29:37.680Z">
 <meta property="article:author" content="Ning">
 <meta property="article:tag" content="问题锦集">
 <meta name="twitter:card" content="summary_large_image">
@@ -310,7 +310,7 @@
         
         
         
-          91 分钟
+          93 分钟
         
       </span>
     
@@ -520,6 +520,11 @@
 </li>
 </ol>
 <h2 id="21、网页发起请求达到后端直到相应的过程"><a href="#21、网页发起请求达到后端直到相应的过程" class="headerlink" title="21、网页发起请求达到后端直到相应的过程"></a>21、网页发起请求达到后端直到相应的过程</h2><p><img src="https://cnblog-img-jn.oss-cn-beijing.aliyuncs.com/img/202209271851308.png" srcset="/img/loading.gif" lazyload alt="image-20220927185123123"></p>
+<h2 id="22、生成雪花算法id（com-baomidou-mybatisplus）"><a href="#22、生成雪花算法id（com-baomidou-mybatisplus）" class="headerlink" title="22、生成雪花算法id（com.baomidou.mybatisplus）"></a>22、生成雪花算法id（com.baomidou.mybatisplus）</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.baomidou.mybatisplus.core.toolkit.IdWorker;<br><span class="hljs-type">long</span> <span class="hljs-variable">id</span> <span class="hljs-operator">=</span> IdWorker.getId();<br></code></pre></td></tr></table></figure>
+
+<h2 id="23、原子操作类AtomicInteger"><a href="#23、原子操作类AtomicInteger" class="headerlink" title="23、原子操作类AtomicInteger"></a>23、原子操作类AtomicInteger</h2><p>AtomicInteger是一个提供原子操作的Integer类，通过线程安全的方式操作加减。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">AtomicInteger</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">AtomicInteger</span>(<span class="hljs-number">1</span>);<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
